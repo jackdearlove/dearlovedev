@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dearlove Development</title>
+  <meta name="description" content="Jack Dearlove makes small, useful iOS apps — from London commuting to mountain maps.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Doto:wght@600;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="masthead">
+   <div class="intro wrap">
+    <h1>Dearlove Development</h1>
+    <p class="lede">I make silly small apps for iPhone and iPad that do one thing well.</p>
+   </div>
+  </header>
+
+  <main>
+    <!-- Tubemoji: a station departure board -->
+    <section class="zone zone-tube" aria-labelledby="tube-title">
+      <div class="wrap">
+        <div class="board">
+          <div class="board-top">
+            <h2 id="tube-title">Tubemoji</h2>
+            <time class="clock" id="clock" aria-hidden="true">--:--:--</time>
+          </div>
+
+          <a class="dep" href="https://apps.apple.com/gb/app/tubemoji-london-trains/id1021373871">
+            <span class="dep-time" id="dep-time">08:02</span>
+            <span class="dep-dest">
+              <img src="images/tubemoji.jpg" alt="" width="40" height="40">
+              <span data-scramble>London Trains</span>
+            </span>
+            <span class="dep-fare" data-scramble>Free</span>
+            <span class="dep-calling"><b>Calling at:</b> tube status, how busy your station is and a heads-up every morning — all told in emoji.</span>
+          </a>
+
+          <div class="status" aria-label="Example line status, not live">
+            <div class="status-head" aria-hidden="true"><span>Line</span><span>Mood</span><span>Status</span></div>
+            <ul>
+              <li><span>Bakerloo</span><span class="emoji">🙂</span><span>Good service</span></li>
+              <li><span>Central</span><span class="emoji">🥵</span><span>Minor delays</span></li>
+              <li><span>Jubilee</span><span class="emoji">😎</span><span>Good service</span></li>
+              <li><span>Northern</span><span class="emoji">🫠</span><span>Severe delays</span></li>
+              <li><span>Victoria</span><span class="emoji">😴</span><span>Part closure</span></li>
+            </ul>
+          </div>
+
+          <a class="board-cta" href="https://apps.apple.com/gb/app/tubemoji-london-trains/id1021373871">
+            Now boarding: <span>App Store</span> <span aria-hidden="true">→</span>
+          </a>
+
+          <div class="ticker" aria-hidden="true">
+            <div class="ticker-track">
+              <span>Statuses shown are examples, not live · Please mind the gap · Passengers are reminded that emoji are not a substitute for a timetable · Stand on the right ·&nbsp;</span>
+              <span>Statuses shown are examples, not live · Please mind the gap · Passengers are reminded that emoji are not a substitute for a timetable · Stand on the right ·&nbsp;</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mountain maps: contour lines and grid squares -->
+    <section class="zone zone-map" aria-labelledby="map-title">
+      <svg class="contours" id="contours" viewBox="0 0 1000 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true"></svg>
+      <div class="wrap">
+        <div class="map-title">
+          <p class="kicker">Travel</p>
+          <h2 id="map-title">Offline Maps</h2>
+          <p class="map-lede">Every route to the top, stored on your phone, with the summit weather forecast.</p>
+        </div>
+
+        <div class="peaks">
+          <article class="peak">
+            <div class="peak-head">
+              <img src="images/snowdon.jpg" alt="" width="64" height="64">
+              <div>
+                <h3 class="peak-name">Mount Snowdon</h3>
+                <span class="peak-welsh">Yr Wyddfa</span>
+              </div>
+            </div>
+            <dl class="peak-facts">
+              <div><dt>Summit</dt><dd><button class="trig" type="button" data-height="1,085 m" aria-label="Summit marker"></button>1,085 m</dd></div>
+              <div><dt>Routes</dt><dd>6</dd></div>
+              <div><dt>Grid ref</dt><dd><a class="grid-ref" href="https://www.openstreetmap.org/?mlat=53.06852&amp;mlon=-4.07619#map=15/53.06852/-4.07619" title="See the summit on a map">SH 609 543</a></dd></div>
+            </dl>
+            <a class="peak-cta" href="https://apps.apple.com/gb/app/mount-snowdon-offline-map/id1512571932">£1.99 on the App Store <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="peak">
+            <div class="peak-head">
+              <img src="images/scafell.jpg" alt="" width="64" height="64">
+              <div>
+                <h3 class="peak-name">Scafell Pike</h3>
+                <span class="peak-welsh">England’s highest</span>
+              </div>
+            </div>
+            <dl class="peak-facts">
+              <div><dt>Summit</dt><dd><button class="trig" type="button" data-height="978 m" aria-label="Summit marker"></button>978 m</dd></div>
+              <div><dt>Routes</dt><dd>4</dd></div>
+              <div><dt>Grid ref</dt><dd><a class="grid-ref" href="https://www.openstreetmap.org/?mlat=54.45420&amp;mlon=-3.21170#map=15/54.45420/-3.21170" title="See the summit on a map">NY 215 072</a></dd></div>
+            </dl>
+            <a class="peak-cta" href="https://apps.apple.com/gb/app/scafell-pike-offline-map/id1550529526">£1.99 on the App Store <span aria-hidden="true">→</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- Planet Dodger: black starfield, matching the game itself -->
+    <section class="zone zone-space" aria-labelledby="space-title">
+      <div class="wrap space-grid">
+        <div class="space-copy">
+          <img class="space-icon" src="images/planet-dodger.jpg" alt="" width="96" height="96">
+          <p class="kicker">Games · Free</p>
+          <h2 id="space-title">Planet Dodger</h2>
+          <p>A super-tricky space game. You’re on the run, and the only thing between you and freedom is an endless field of planets. Dodge left and right for as long as you can.</p>
+          <p class="space-tagline">Don’t get toasted.</p>
+          <a class="btn btn-space" href="https://apps.apple.com/gb/app/planet-dodger/id1330610959">Launch on the App Store <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="shots">
+          <img src="images/planet-dodger-1.jpg" alt="Planet Dodger screenshot: your ship, labelled “This is you”" width="600" height="1066" loading="lazy">
+          <img src="images/planet-dodger-3.jpg" alt="Planet Dodger screenshot: a planet heading for the ship, labelled “Dodge those planets”" width="600" height="1066" loading="lazy">
+          <img src="images/planet-dodger-4.jpg" alt="Planet Dodger screenshot: the ship exploding against a planet, labelled “Don’t get toasted”" width="600" height="1066" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer wrap">
+    <a href="https://apps.apple.com/gb/developer/jack-dearlove/id1021373870">All apps on the App Store →</a>
+    <a href="privacy.html">Privacy policy</a>
+    <span>© <span id="year">2026</span> Jack Dearlove</span>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
